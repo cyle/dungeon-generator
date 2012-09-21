@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>dungeon master generator</title>
+</head>
+<body>
+<h4>dungeon master generator</h4>
+<form action="generate.php">
+<p>max width (in tiles): <input type="number" value="100" name="w" /></p>
+<p>max height (in tiles): <input type="number" value="50" name="h" /></p>
+<p>max rooms (default: based on surface area): <input type="number" value="0" name="r" /></p>
+<p>game type: <select name="g"><option value="r">Random</option><option value="c">Capture Something</option><option value="g">Reach Goal</option></select></p>
+<p>theme: <select name="t"><option value="r">Random</option><option value="cave">Caves</option><option value="dungeon">Dungeon</option></select></p>
+<p>intended player level (difficulty): <input type="number" value="1" name="l" /></p>
+<p><input type="submit" value="generate!" />
+</form>
+</body>
+</html>
