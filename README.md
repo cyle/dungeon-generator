@@ -13,19 +13,19 @@ NOTE: The monster list included that's hard-coded into generate.php is based on 
 ### Features
 
 * Crafts a basic adventure with random dungeon name, story, and goal. Every adventure is unique!
-* * Currently has two basic adventure area styles: dungeon or cave.
-* * Currently has two basic adventure goals: "reach a certain room" or "capture an item and escape."
-* * Currently allows you to input a "desired level difficulty", up to level 5.
+	- Currently has two basic adventure area styles: dungeon or cave.
+	- Currently has two basic adventure goals: "reach a certain room" or "capture an item and escape."
+	- Currently allows you to input a "desired level difficulty", up to level 5.
 * Builds a random dungeon layout with a variable or user-set number of rooms, max width, and max height. It's meant to be copied down onto tiled graph paper or mat as you play.
-* * Builds rooms of random size and position, complete with the possibility of monsters (according to level), with randomized room descriptions.
-* * Builds hallways to connect rooms. Doors to hallways can be locked and/or barred, which requires a skill check to get past.
-* * There is always a START room and an END room. The END room contains whatever goal was determined in the story.
-* * Error detection. If the END room isn't accessible in some fashion, it'll throw an error and tell you to refresh for a new dungeon.
+	- Builds rooms of random size and position, complete with the possibility of monsters (according to level), with randomized room descriptions.
+	- Builds hallways to connect rooms. Doors to hallways can be locked and/or barred, which requires a skill check to get past.
+	- There is always a START room and an END room. The END room contains whatever goal was determined in the story.
+	- Error detection. If the END room isn't accessible in some fashion, it'll throw an error and tell you to refresh for a new dungeon.
 * Dungeon experience unfolds as you play.
-* * You start out only seeing the START room as well as any hallways connected to it.
-* * Players tackle the problems in the room, then click on a hallway to try to go down it.
-* * On success, layout reveals the new room, room info, any rooms directly adjacent to it, and any hallways that lead from it.
-* * Keep going til you reach the end!
+	- You start out only seeing the START room as well as any hallways connected to it.
+	- Players tackle the problems in the room, then click on a hallway to try to go down it.
+	- On success, layout reveals the new room, room info, any rooms directly adjacent to it, and any hallways that lead from it.
+	- Keep going til you reach the end!
 
 ### Requirements
 
