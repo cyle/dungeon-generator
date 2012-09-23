@@ -288,7 +288,12 @@ $total_surface_area = $max_width * $max_height;
 if (isset($_GET['r']) && is_numeric($_GET['r']) && $_GET['r'] > 0) {
 	$max_rooms = (int) $_GET['r'] * 1;
 } else {
-	$max_rooms = ($total_surface_area/100);
+	if ($total_surface_area <= 1000) {
+		$max_rooms = floor($total_surface_area/25);
+	} else {
+		$max_rooms = floor($total_surface_area/100);
+	}
+	
 }
 
 echo 'Grid dimentions: '.$max_width.'x'.$max_height.', surface area: '.$total_surface_area."\n";
@@ -313,8 +318,13 @@ for ($room_id = 0; $room_id < $max_rooms; $room_id++) {
 	$new_room['id'] = $room_id;
 	$new_room['cons'] = array();
 	$new_room['adjacent'] = array();
-	$new_room['w'] = mt_rand(3, 10);
-	$new_room['h'] = mt_rand(3, 10);
+	if ($total_surface_area <= 1000) {
+		$new_room['w'] = mt_rand(2, 5);
+		$new_room['h'] = mt_rand(2, 5);
+	} else {
+		$new_room['w'] = mt_rand(2, 9);
+		$new_room['h'] = mt_rand(2, 9);
+	}
 	$new_room['sa'] = $new_room['w'] * $new_room['h']; // surface area
 	$new_room['corners'] = array();
 	$new_room['type'] = 'normal';
